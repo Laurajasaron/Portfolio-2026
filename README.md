@@ -7,8 +7,8 @@
 **3 Marketing** • Markov attribution • 140K sessions • +27% ROAS  
 
 **Skills** Python/pandas • SQL • Power BI • Tableau • Google Analytics  
-**Live** --> [Portfolio](https://laurajasaron.github.io/Portfolio-2026/)
+**Live** → [Portfolio](https://laurajasaron.github.io/Portfolio-2026/)
 
 ---
 
-*Built HTML/CSS — zero frameworks*
+*Built HTML/CSS  zero frameworks*
