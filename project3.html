@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project 03 — Digital Marketing ROI</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">A<span>.</span>Portfolio</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="project1.html">Project 01</a>
+    <a href="project2.html">Project 02</a>
+    <a href="project3.html" class="active">Project 03</a>
+  </div>
+</nav>
+
+<!-- PROJECT HERO -->
+<section class="proj-hero">
+  <div class="proj-hero-ring" style="width:500px;height:500px;top:-200px;right:-100px;"></div>
+  <a class="back-btn" href="index.html">← Back to Portfolio</a>
+  <div class="hero-kicker">Project 03 &mdash; Digital Marketing Analytics</div>
+  <h1>Maximise ROI: Analysing and Optimising Digital Marketing Campaigns</h1>
+  <p class="proj-hero-sub">Multi-channel attribution &middot; Markov chain modelling &middot; A/B testing &middot; Power BI</p>
+  <div class="proj-metrics-bar">
+    <div class="proj-metric-block">
+      <span class="proj-metric-val">+27%</span>
+      <div class="proj-metric-lbl">Projected ROAS improvement</div>
+    </div>
+    <div class="proj-metric-block">
+      <span class="proj-metric-val">+19%</span>
+      <div class="proj-metric-lbl">Validated conversion uplift</div>
+    </div>
+    <div class="proj-metric-block">
+      <span class="proj-metric-val">140k</span>
+      <div class="proj-metric-lbl">Sessions analysed</div>
+    </div>
+    <div class="proj-metric-block">
+      <span class="proj-metric-val">4</span>
+      <div class="proj-metric-lbl">Channels remodelled</div>
+    </div>
+  </div>
+</section>
+
+<div class="tools-bar">
+  <div class="tool-item"><span class="tool-dot"></span>Python (pandas, NumPy)</div>
+  <div class="tool-item"><span class="tool-dot"></span>Google Analytics</div>
+  <div class="tool-item"><span class="tool-dot"></span>Power BI</div>
+  <div class="tool-item"><span class="tool-dot"></span>Meta Ads Manager</div>
+  <div class="tool-item"><span class="tool-dot"></span>Markov Attribution</div>
+  <div class="tool-item"><span class="tool-dot"></span>A/B Testing</div>
+  <div class="tool-item"><span class="tool-dot"></span>Statistical Significance</div>
+</div>
+
+<!-- NARRATIVE -->
+<section class="section">
+  <div class="section-label">Project Narrative</div>
+  <h2 class="section-title">Attribution, reallocation,<br><em>results.</em></h2>
+
+  <div class="narrative-grid">
+    <div class="narrative-step">
+      <div class="narrative-step-label">Problem</div>
+      <div class="narrative-step-text">Last-click attribution was systematically over-crediting paid search while starving profitable upper-funnel channels of budget. The business was optimising the wrong signal entirely.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Data</div>
+      <div class="narrative-step-text">6 months of campaign data from Google Analytics, Meta Ads Manager, and an email platform. 140,000 sessions and 4,200 tracked conversions across four channels.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Solution</div>
+      <div class="narrative-step-text">Data-driven multi-touch attribution model built in Python using Markov chain analysis. Each channel's true marginal contribution to conversion was isolated independently of the others.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Recommendation</div>
+      <div class="narrative-step-text">Reallocate 22% of paid search spend to content marketing and email retargeting. Projected payback period of 6 weeks based on observed historical conversion rates per channel.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Impact</div>
+      <div class="narrative-step-text">Simulated model projected a 27% improvement in blended ROAS. A controlled A/B test validated a 19% real-world conversion rate uplift, statistically significant at p &lt; 0.05.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Method</div>
+      <div class="narrative-step-text">Markov chain attribution, cohort comparison, two-tailed significance testing. Power BI executive dashboard built for senior stakeholder communication without technical jargon.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA VISUALIZATIONS -->
+<section class="charts-section">
+  <div class="section-label">Data Visualisation</div>
+  <h2 class="section-title" style="margin-bottom:28px">Attribution exposed.<br><em>Budget realigned.</em></h2>
+
+  <div class="charts-grid">
+
+    <div class="chart-card">
+      <div class="chart-title">Last-Click vs Markov Attribution</div>
+      <div class="chart-sub">Conversion credit assigned per channel under each model</div>
+      <div class="chart-wrap" style="height:260px">
+        <canvas id="attributionChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Budget Reallocation Recommendation</div>
+      <div class="chart-sub">Spend distribution before and after optimisation</div>
+      <div class="chart-wrap" style="height:260px">
+        <canvas id="budgetChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card chart-card-full">
+      <div class="chart-title">A/B Test Results: Conversion Rate Over Time</div>
+      <div class="chart-sub">Control group (old allocation) vs Test group (reallocated budget) — 8-week observation window</div>
+      <div class="chart-wrap" style="height:240px">
+        <canvas id="abChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">ROAS by Channel (Before vs After)</div>
+      <div class="chart-sub">Return on ad spend per euro invested, per channel</div>
+      <div class="chart-wrap" style="height:240px">
+        <canvas id="roasChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Conversion Funnel Drop-off</div>
+      <div class="chart-sub">Session-to-conversion funnel analysis across 140k sessions</div>
+      <div class="chart-wrap" style="height:240px">
+        <canvas id="funnelChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px;padding-bottom:40px">
+  <div class="section-label">Tools &amp; Methods</div>
+  <div class="tools-row" style="margin-top:12px">
+    <span class="tool-tag">Python (pandas, NumPy)</span>
+    <span class="tool-tag">Google Analytics</span>
+    <span class="tool-tag">Meta Ads Manager</span>
+    <span class="tool-tag">Power BI</span>
+    <span class="tool-tag">Markov Chain Attribution</span>
+    <span class="tool-tag">A/B Testing</span>
+    <span class="tool-tag">Statistical Significance (p&lt;0.05)</span>
+    <span class="tool-tag">Cohort Analysis</span>
+    <span class="tool-tag">ROAS Modelling</span>
+  </div>
+</section>
+
+<div class="closing" style="justify-content:space-between">
+  <p class="closing-quote">"The budget was optimised for the <span>last click</span>. The revenue was driven by what came before it."</p>
+  <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-end">
+    <a href="index.html" class="next-btn">← Back to Portfolio</a>
+    <span style="font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:1px">END OF PORTFOLIO</span>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-left">Project 03 &mdash; Digital Marketing Analytics</span>
+  <span class="footer-right">Analytical. Strategic. Operational.</span>
+</footer>
+
+<script>
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+Chart.defaults.color = '#8a9bb5';
+const GOLD = '#c9a84c';
+const NAVY = '#0a1628';
+
+const channels = ['Paid Search', 'Content Marketing', 'Email', 'Social Media'];
+
+// ATTRIBUTION GROUPED BAR
+new Chart(document.getElementById('attributionChart'), {
+  type: 'bar',
+  data: {
+    labels: channels,
+    datasets: [
+      {
+        label: 'Last-Click attribution (%)',
+        data: [52, 12, 18, 18],
+        backgroundColor: 'rgba(10,22,40,0.22)', borderWidth: 0, borderRadius: 2
+      },
+      {
+        label: 'Markov attribution (%)',
+        data: [31, 28, 26, 15],
+        backgroundColor: GOLD, borderWidth: 0, borderRadius: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 14 } } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 }, callback: v => v + '%' }, max: 60 }
+    }
+  }
+});
+
+// BUDGET DOUGHNUT BEFORE / AFTER
+new Chart(document.getElementById('budgetChart'), {
+  type: 'bar',
+  data: {
+    labels: channels,
+    datasets: [
+      {
+        label: 'Budget Before (%)',
+        data: [55, 15, 14, 16],
+        backgroundColor: 'rgba(201,168,76,0.35)', borderWidth: 0, borderRadius: 2
+      },
+      {
+        label: 'Budget After (%)',
+        data: [33, 28, 25, 14],
+        backgroundColor: GOLD, borderWidth: 0, borderRadius: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 14 } } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 }, callback: v => v + '%' }, max: 60 }
+    }
+  }
+});
+
+// A/B LINE CHART
+const weeks = ['W1','W2','W3','W4','W5','W6','W7','W8'];
+new Chart(document.getElementById('abChart'), {
+  type: 'line',
+  data: {
+    labels: weeks,
+    datasets: [
+      {
+        label: 'Control group (old allocation)',
+        data: [3.1, 3.0, 3.2, 3.1, 3.0, 3.2, 3.1, 3.0],
+        borderColor: 'rgba(10,22,40,0.4)', backgroundColor: 'transparent',
+        borderWidth: 1.5, pointRadius: 3, tension: 0.3, borderDash: [4,3]
+      },
+      {
+        label: 'Test group (reallocated budget)',
+        data: [3.1, 3.3, 3.5, 3.7, 3.8, 3.9, 3.9, 3.7],
+        borderColor: GOLD, backgroundColor: 'rgba(201,168,76,0.06)',
+        borderWidth: 2, pointRadius: 3, pointBackgroundColor: GOLD, tension: 0.3, fill: true
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 14 } },
+      annotation: {}
+    },
+    scales: {
+      x: { grid: { color: 'rgba(10,22,40,0.04)' }, ticks: { font: { size: 11 } } },
+      y: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 }, callback: v => v.toFixed(1) + '%' }, title: { display: true, text: 'Conversion rate', font: { size: 11 } } }
+    }
+  }
+});
+
+// ROAS BAR
+new Chart(document.getElementById('roasChart'), {
+  type: 'bar',
+  data: {
+    labels: channels,
+    datasets: [
+      {
+        label: 'ROAS Before',
+        data: [2.8, 4.2, 5.1, 3.0],
+        backgroundColor: 'rgba(201,168,76,0.35)', borderWidth: 0, borderRadius: 2
+      },
+      {
+        label: 'ROAS After',
+        data: [3.5, 5.8, 6.4, 3.1],
+        backgroundColor: GOLD, borderWidth: 0, borderRadius: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 14 } } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 }, callback: v => v + 'x' } }
+    }
+  }
+});
+
+// FUNNEL
+new Chart(document.getElementById('funnelChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Sessions', 'Product Views', 'Add to Cart', 'Checkout', 'Conversion'],
+    datasets: [{
+      data: [140000, 62000, 18400, 7200, 4200],
+      backgroundColor: [GOLD,'rgba(201,168,76,0.78)','rgba(201,168,76,0.58)','rgba(201,168,76,0.40)','rgba(201,168,76,0.25)'],
+      borderWidth: 0, borderRadius: 2
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 }, callback: v => (v/1000).toFixed(0) + 'k' } },
+      y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+    }
+  }
+});
+</script>
+</body>
+</html>

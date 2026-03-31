@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project 02 — France vs Iceland Market Study</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">A<span>.</span>Portfolio</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="project1.html">Project 01</a>
+    <a href="project2.html" class="active">Project 02</a>
+    <a href="project3.html">Project 03</a>
+  </div>
+</nav>
+
+<!-- PROJECT HERO -->
+<section class="proj-hero">
+  <div class="proj-hero-ring" style="width:500px;height:500px;top:-200px;right:-100px;"></div>
+  <a class="back-btn" href="index.html">← Back to Portfolio</a>
+  <div class="hero-kicker">Project 02 &mdash; International Market Strategy <span class="featured-pill">Signature Project</span></div>
+  <h1>Exporting to an Isolated Market: France vs Iceland Comparative Study</h1>
+  <p class="proj-hero-sub">Field research &middot; Macroeconomic modelling &middot; 14-indicator scoring framework &middot; Power BI</p>
+  <div class="proj-metrics-bar">
+    <div class="proj-metric-block">
+      <span class="proj-metric-val">14</span>
+      <div class="proj-metric-lbl">Commercial indicators</div>
+    </div>
+    <div class="proj-metric-block">
+      <span class="proj-metric-val">3</span>
+      <div class="proj-metric-lbl">High-ROI entry sectors</div>
+    </div>
+    <div class="proj-metric-block">
+      <span class="proj-metric-val">6.2</span>
+      <div class="proj-metric-lbl">Iceland risk score /10</div>
+    </div>
+    <div class="proj-metric-block">
+      <span class="proj-metric-val">2x</span>
+      <div class="proj-metric-lbl">Risk differential vs France</div>
+    </div>
+  </div>
+</section>
+
+<div class="tools-bar">
+  <div class="tool-item"><span class="tool-dot"></span>Power BI</div>
+  <div class="tool-item"><span class="tool-dot"></span>Excel Scoring Matrix</div>
+  <div class="tool-item"><span class="tool-dot"></span>Eurostat API</div>
+  <div class="tool-item"><span class="tool-dot"></span>World Bank Data</div>
+  <div class="tool-item"><span class="tool-dot"></span>Statistics Iceland</div>
+  <div class="tool-item"><span class="tool-dot"></span>Field Research</div>
+</div>
+
+<!-- FIELD NOTE -->
+<section class="section" style="padding-bottom:0">
+  <div class="field-note">
+    Field note: This project was conceived and built during my academic exchange in Reykjavík, Iceland. Unlike a desk study, the analysis is informed by direct observation of consumer behaviour, retail infrastructure, and logistics constraints in a market that most European frameworks fail to model accurately. The numbers are supported by lived context.
+  </div>
+</section>
+
+<!-- NARRATIVE -->
+<section class="section" style="padding-top:36px">
+  <div class="section-label">Project Narrative</div>
+  <h2 class="section-title">From field<br><em>observation to strategy.</em></h2>
+
+  <div class="narrative-grid">
+    <div class="narrative-step">
+      <div class="narrative-step-label">Problem</div>
+      <div class="narrative-step-text">French companies systematically overestimate Iceland's commercial accessibility due to EU proximity assumptions. No tailored comparative framework existed for this specific market pair.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Data</div>
+      <div class="narrative-step-text">World Bank indicators, Statistics Iceland, Eurostat trade data, French customs export figures. Supplemented by qualitative field observation of Reykjavík's retail, logistics, and pricing environment.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Solution</div>
+      <div class="narrative-step-text">A 14-indicator scoring matrix covering trade logistics, purchasing power parity, regulatory environment, currency exposure, and demand stability. Visualised in a Power BI comparative dashboard.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Recommendation</div>
+      <div class="narrative-step-text">Optimal entry via premium food exports, renewable energy technology partnerships, or digital B2C services. Capital-intensive physical retail strongly inadvisable. Systematic ISK/EUR currency hedging required from day one.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Impact</div>
+      <div class="narrative-step-text">Entry risk score of 6.2/10 versus France's 3.1/10. Three sectors identified with favourable risk-adjusted return potential for a 3-year time horizon. Two sectors explicitly flagged as traps for unprepared entrants.</div>
+    </div>
+    <div class="narrative-step">
+      <div class="narrative-step-label">Differentiator</div>
+      <div class="narrative-step-text">A perspective no desk researcher can replicate: quantitative scoring framework grounded in genuine on-the-ground market observation. Data informed by experience, not assumption alone.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA VISUALIZATIONS -->
+<section class="charts-section">
+  <div class="section-label">Data Visualisation</div>
+  <h2 class="section-title" style="margin-bottom:28px">France vs Iceland:<br><em>the data.</em></h2>
+
+  <div class="charts-grid">
+
+    <div class="chart-card chart-card-full">
+      <div class="chart-title">14-Indicator Comparative Scoring: France vs Iceland</div>
+      <div class="chart-sub">Score out of 10 for each commercial indicator (higher = more favourable for market entry)</div>
+      <div class="chart-wrap" style="height:320px">
+        <canvas id="indicatorsChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Market Entry Risk Radar</div>
+      <div class="chart-sub">6-dimension risk profile comparison</div>
+      <div class="chart-wrap" style="height:260px">
+        <canvas id="riskRadar"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Sector Opportunity Matrix</div>
+      <div class="chart-sub">Risk vs return potential for each entry sector evaluated</div>
+      <div class="chart-wrap" style="height:260px">
+        <canvas id="sectorChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">GDP per Capita Comparison</div>
+      <div class="chart-sub">Iceland vs France vs EU average (USD, 2023) — purchasing power context</div>
+      <div class="chart-wrap" style="height:220px">
+        <canvas id="gdpChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">ISK/EUR Exchange Rate Volatility</div>
+      <div class="chart-sub">Indexed exchange rate fluctuation over 5 years — key currency risk indicator</div>
+      <div class="chart-wrap" style="height:220px">
+        <canvas id="currencyChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px;padding-bottom:40px">
+  <div class="section-label">Tools &amp; Methods</div>
+  <div class="tools-row" style="margin-top:12px">
+    <span class="tool-tag">Power BI</span>
+    <span class="tool-tag">Excel Scoring Matrix</span>
+    <span class="tool-tag">Eurostat API</span>
+    <span class="tool-tag">World Bank Open Data</span>
+    <span class="tool-tag">Statistics Iceland</span>
+    <span class="tool-tag">French Customs Data</span>
+    <span class="tool-tag">Comparative Scoring Framework</span>
+    <span class="tool-tag">Field Research</span>
+    <span class="tool-tag">Risk-Return Modelling</span>
+  </div>
+</section>
+
+<div class="closing">
+  <p class="closing-quote">"Iceland is not a difficult market. It is a <span>misunderstood</span> one. The gap between assumption and reality is where opportunity lives."</p>
+  <a href="project3.html" class="next-btn">Next: Project 03 →</a>
+</div>
+
+<footer>
+  <span class="footer-left">Project 02 &mdash; France vs Iceland</span>
+  <span class="footer-right">Analytical. Strategic. Operational.</span>
+</footer>
+
+<script>
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+Chart.defaults.color = '#8a9bb5';
+const GOLD = '#c9a84c';
+const NAVY = '#0a1628';
+
+const indicators = [
+  'Market size','Purchasing power','Logistics cost','Currency stability',
+  'Regulatory ease','Trade openness','Consumer demand','Digital readiness',
+  'Competition level','Labour cost','Supply reliability','Infrastructure',
+  'Political stability','Cultural proximity'
+];
+
+// 14-INDICATOR BAR
+new Chart(document.getElementById('indicatorsChart'), {
+  type: 'bar',
+  data: {
+    labels: indicators,
+    datasets: [
+      {
+        label: 'France',
+        data: [8.5,7.2,7.8,8.8,7.5,8.0,7.9,8.2,5.5,6.0,8.4,8.6,9.0,9.2],
+        backgroundColor: GOLD, borderWidth: 0, borderRadius: 2
+      },
+      {
+        label: 'Iceland',
+        data: [3.2,8.8,4.5,4.8,6.2,6.5,7.4,8.5,7.8,4.5,3.8,6.2,8.8,5.0],
+        backgroundColor: 'rgba(10,22,40,0.25)', borderWidth: 0, borderRadius: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 14 } } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 35 } },
+      y: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 } }, min: 0, max: 10 }
+    }
+  }
+});
+
+// RISK RADAR
+new Chart(document.getElementById('riskRadar'), {
+  type: 'radar',
+  data: {
+    labels: ['Currency Risk','Logistics','Supply Chain','Market Access','Regulatory','Demand Stability'],
+    datasets: [
+      {
+        label: 'France',
+        data: [15, 18, 14, 20, 18, 15],
+        borderColor: GOLD, backgroundColor: 'rgba(201,168,76,0.12)',
+        borderWidth: 1.5, pointBackgroundColor: GOLD, pointRadius: 3
+      },
+      {
+        label: 'Iceland',
+        data: [58, 62, 68, 45, 35, 40],
+        borderColor: 'rgba(10,22,40,0.45)', backgroundColor: 'rgba(10,22,40,0.06)',
+        borderWidth: 1.5, pointBackgroundColor: NAVY, pointRadius: 3
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 12 } } },
+    scales: {
+      r: {
+        min: 0, max: 70,
+        ticks: { display: false, stepSize: 20 },
+        grid: { color: 'rgba(10,22,40,0.07)' },
+        angleLines: { color: 'rgba(10,22,40,0.07)' },
+        pointLabels: { font: { size: 10 }, color: '#3d4e63' }
+      }
+    }
+  }
+});
+
+// SECTOR BUBBLE / BAR
+new Chart(document.getElementById('sectorChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Premium Food', 'Renewable Energy', 'Digital Services', 'Physical Retail', 'Manufacturing', 'Tourism'],
+    datasets: [
+      {
+        label: 'Return potential (0–10)',
+        data: [8.2, 7.9, 8.5, 4.0, 3.5, 6.0],
+        backgroundColor: GOLD, borderWidth: 0, borderRadius: 2
+      },
+      {
+        label: 'Risk level (0–10)',
+        data: [4.5, 5.8, 3.8, 7.5, 8.2, 5.5],
+        backgroundColor: 'rgba(10,22,40,0.22)', borderWidth: 0, borderRadius: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 12 } } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 25 } },
+      y: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 } }, min: 0, max: 10 }
+    }
+  }
+});
+
+// GDP BAR
+new Chart(document.getElementById('gdpChart'), {
+  type: 'bar',
+  data: {
+    labels: ['EU Average', 'France', 'Iceland'],
+    datasets: [{
+      data: [38500, 43200, 78400],
+      backgroundColor: ['rgba(201,168,76,0.35)', GOLD, 'rgba(201,168,76,0.65)'],
+      borderWidth: 0, borderRadius: 2
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 12 } } },
+      y: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 }, callback: v => '$' + (v/1000).toFixed(0) + 'k' } }
+    }
+  }
+});
+
+// CURRENCY LINE
+const years = ['2019','2020','2021','2022','2023','2024'];
+new Chart(document.getElementById('currencyChart'), {
+  type: 'line',
+  data: {
+    labels: years,
+    datasets: [{
+      label: 'ISK/EUR index (base 100 = 2019)',
+      data: [100, 88, 92, 79, 84, 81],
+      borderColor: GOLD, backgroundColor: 'rgba(201,168,76,0.07)',
+      borderWidth: 2, pointRadius: 3, pointBackgroundColor: GOLD,
+      tension: 0.3, fill: true
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: { grid: { color: 'rgba(10,22,40,0.05)' }, ticks: { font: { size: 11 }, callback: v => v }, min: 70, max: 110 }
+    }
+  }
+});
+</script>
+</body>
+</html>
